@@ -10,5 +10,6 @@
     <color name="colorPrimary">#B2212121</color>
     <color name="colorPrimaryDark">#B2212121</color>
     <color name="colorAccent">#008F24</color>
-<color name="lghtGrey"> #C4C4C4</color>
+    <color name="lghtGrey"> #C4C4C4</color>
+    <color name="toolbar_colo_control_normal">#FF000000</color>
 </resources>
