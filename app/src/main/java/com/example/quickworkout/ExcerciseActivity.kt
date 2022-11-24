@@ -8,7 +8,9 @@ import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quickworkout.databinding.ActivityExcerciseBinding
 import java.util.*
 import kotlin.collections.ArrayList
@@ -24,6 +26,9 @@ class ExcerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var currentExcercisePosition = -1
     private var tts:TextToSpeech? = null
     private var player:MediaPlayer? = null
+
+
+    private var excerciseAdapter:ExcerciseStatusAdapter? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityExcerciseBinding.inflate(layoutInflater)
@@ -38,6 +43,13 @@ class ExcerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             onBackPressed()
         }
         setupRestView()
+        setupExcercseStatusRecyclerView()
+    }
+
+    private fun setupExcercseStatusRecyclerView(){
+    binding?.rvExerciseStatus?.layoutManager =LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+    excerciseAdapter = ExcerciseStatusAdapter(excerciseList!!)
+    binding?.rvExerciseStatus?.adapter = excerciseAdapter
     }
     private fun setupRestView(){
 
