@@ -1,5 +1,6 @@
 package com.example.quickworkout
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import com.example.quickworkout.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private var binding:ActivityMainBinding? = null
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,6 +24,11 @@ class MainActivity : AppCompatActivity() {
         binding?.flBMI?.setOnClickListener {
             // Launching the BMI Activity
             val intent = Intent(this@MainActivity, BMI::class.java)
+            startActivity(intent)
+        }
+        binding?.flHistory?.setOnClickListener {
+            // Launching the History Activity
+            val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
     }
