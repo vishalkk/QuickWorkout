@@ -2,4 +2,5 @@
     <string name="app_name">QuickWorkout</string>
     <string name="image">image</string>
     <string name="start">START</string>
+    <string name="stop_workout">This will stop your workout.You\'ve come this far,are you sure you want to quit?</string>
 </resources>
