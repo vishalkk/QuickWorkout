@@ -29,6 +29,7 @@ class ExcerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var excerciseList :ArrayList<ExcerciseModel>?=null
     private var currentExcercisePosition = -1
     private var tts:TextToSpeech? = null
+
     private var player:MediaPlayer? = null
 
 
